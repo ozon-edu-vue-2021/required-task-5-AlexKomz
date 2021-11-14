@@ -1,14 +1,22 @@
 <template>
   <div id="app">
+    <NavBar />
+    <RouterView />
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+import NavBar from "./components/NavBar";
 
 export default {
+  components: { NavBar },
+  created() {
+    this.loading();
+  },
   name: "App",
-  components: {
-    Form,
+  methods: {
+    ...mapActions(["loading"]),
   },
 };
 </script>
@@ -16,9 +24,6 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  background-color: #fafafa;
-  padding: 24px;
   box-sizing: border-box;
 }
 
@@ -26,6 +31,7 @@ html,
 body,
 #app {
   height: 100%;
+  margin: 0;
 }
 
 * {
