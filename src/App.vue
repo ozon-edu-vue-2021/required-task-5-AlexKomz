@@ -8,6 +8,7 @@
 <script>
 import { mapActions } from "vuex";
 import NavBar from "./components/NavBar";
+import { LOADING } from "./consts";
 
 export default {
   components: { NavBar },
@@ -16,7 +17,7 @@ export default {
   },
   name: "App",
   methods: {
-    ...mapActions(["loading"]),
+    ...mapActions({ loading: LOADING }),
   },
 };
 </script>
