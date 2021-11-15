@@ -35,7 +35,13 @@ export default {
       const basketData = this.products.map(
         (product) => `${product.title} ${product.price}₽ X ${product.count}`
       );
-      basketData.push(`\nВсего: ${this.totalCost}₽`);
+
+      if (basketData.length) {
+        basketData.push(`\nВсего: ${this.totalCost}₽`);
+      } else {
+        basketData.push(`В корзине пусто!`);
+      }
+
       alert(basketData.join("\n"));
     },
   },
