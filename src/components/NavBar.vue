@@ -2,11 +2,11 @@
   <nav class="navigation">
     <div class="wrapper">
       <RouterLink class="navigation__link" to="/" exact> Товары </RouterLink>
-      <RouterLink class="navigation__link" to="/favorites" exact>
+      <RouterLink class="navigation__link" to="/favorites">
         Избранное
       </RouterLink>
     </div>
-    <RouterLink class="navigation__link" to="/basket" exact>
+    <RouterLink class="navigation__link" to="/basket">
       Корзина ({{ count }})
     </RouterLink>
   </nav>
