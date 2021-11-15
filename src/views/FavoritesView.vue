@@ -5,7 +5,7 @@
 <script>
 import { mapGetters } from "vuex";
 import CardList from "../components/CardList";
-import { GET_FAVORITE_PRODUCTS } from "../consts";
+import { GET_FAVORITE_PRODUCTS } from "@/consts";
 
 export default {
   name: "FavoritesView",

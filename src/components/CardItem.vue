@@ -7,7 +7,7 @@
     />
     <span class="card__price">{{ product.price }} &#8381;</span>
     <h5 class="card__title">{{ product.title }}</h5>
-    <label>
+    <label class="card__favorite">
       <input
         :checked="product.isFavorite"
         type="checkbox"
@@ -24,7 +24,7 @@
 
 <script>
 import { mapMutations } from "vuex";
-import { ADD_TO_BASKET, TOGGLE_FAVORITE_PRODUCT } from "../consts";
+import { ADD_TO_BASKET, TOGGLE_FAVORITE_PRODUCT } from "@/consts";
 
 export default {
   data: () => ({
@@ -76,6 +76,10 @@ export default {
 
 .card__count {
   width: 50px;
+}
+
+.card__favorite input {
+  margin: 0;
 }
 
 .card__count input {

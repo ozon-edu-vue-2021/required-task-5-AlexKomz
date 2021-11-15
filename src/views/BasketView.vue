@@ -18,7 +18,7 @@
 <script>
 import { mapGetters, mapState } from "vuex";
 import BasketList from "../components/BasketList";
-import { GET_COUNT, GET_TOTAL_COST } from "../consts";
+import { GET_COUNT, GET_TOTAL_COST } from "@/consts";
 
 export default {
   name: "BasketView",

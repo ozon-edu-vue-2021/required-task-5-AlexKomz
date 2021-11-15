@@ -1,10 +1,10 @@
-import { getRandomImageName, getRandomInt } from "../../helper";
+import { getRandomImageName, getRandomInt } from "@/helper";
 import {
   GET_FAVORITE_PRODUCTS,
   LOADING,
   SET_PRODUCTS,
   TOGGLE_FAVORITE_PRODUCT,
-} from "../../consts";
+} from "@/consts";
 
 const URL = "https://random-data-api.com/api/food/random_food?size=30";
 

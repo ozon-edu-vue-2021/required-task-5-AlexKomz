@@ -9,6 +9,7 @@
 
 <script>
 import BasketItem from "./BasketItem";
+
 export default {
   name: "BasketList",
   components: { BasketItem },

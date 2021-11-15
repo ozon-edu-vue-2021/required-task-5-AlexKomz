@@ -4,7 +4,7 @@ import {
   GET_COUNT,
   GET_TOTAL_COST,
   REMOVE_FROM_BASKET,
-} from "../../consts";
+} from "@/consts";
 
 export const basket = {
   namespace: true,

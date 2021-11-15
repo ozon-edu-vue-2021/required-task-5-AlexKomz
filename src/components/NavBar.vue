@@ -14,7 +14,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import { GET_COUNT } from "../consts";
+import { GET_COUNT } from "@/consts";
 
 export default {
   name: "NavBar",

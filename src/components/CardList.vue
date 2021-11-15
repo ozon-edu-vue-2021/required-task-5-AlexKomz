@@ -9,6 +9,7 @@
 
 <script>
 import CardItem from "./CardItem";
+
 export default {
   name: "CardList",
   components: { CardItem },

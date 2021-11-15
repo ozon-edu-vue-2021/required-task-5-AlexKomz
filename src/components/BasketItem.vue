@@ -8,6 +8,8 @@
     <div class="item__info">
       <h5 class="item__title">{{ product.title }}</h5>
       <span class="item__price">{{ product.price }} &#8381;</span>
+    </div>
+    <div class="item__wrapper">
       <label class="item__count">
         <input
           min="1"
@@ -16,14 +18,14 @@
           @input="inputHandler"
         />
       </label>
+      <button class="item__button" @click="removeClickHandler">Удалить</button>
     </div>
-    <button class="item__button" @click="removeClickHandler">Удалить</button>
   </div>
 </template>
 
 <script>
 import { mapMutations } from "vuex";
-import { CHANGE_ITEM_COUNT, REMOVE_FROM_BASKET } from "../consts";
+import { CHANGE_ITEM_COUNT, REMOVE_FROM_BASKET } from "@/consts";
 
 export default {
   name: "BasketItem",
@@ -53,6 +55,7 @@ export default {
 .item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 24px;
 
   min-width: 700px;
@@ -60,7 +63,6 @@ export default {
 
 .item__info {
   display: flex;
-  align-self: flex-start;
   align-items: center;
   gap: 12px;
 }
@@ -74,8 +76,14 @@ export default {
   font-weight: bold;
 }
 
+.item__wrapper {
+  display: flex;
+  gap: 5px;
+}
+
 .item__title {
   margin: 0;
+  max-width: 250px;
 }
 
 .item__count {
